@@ -34,7 +34,7 @@ func longestPalindrome(s string) string {
 }
 
 func Q5(s string) string {
-	// runtime less than 38.33%
-	// memory less than 89.38%
+	// time 38.33%
+	// mem  89.38%
 	return longestPalindrome(s)
 }

@@ -1,5 +1,6 @@
 package interview
 
+// math 类的题目, 主要是推导 overflow 的条件, 可跳过此题目
 func reverse(x int) int {
 	minint32, maxint32 := -1<<31, 1<<31-1
 	// 2147483647 -2147483648
@@ -25,5 +26,7 @@ func reverse(x int) int {
 }
 
 func Q7(x int) int {
+	// time 100.00%
+	// mem  86.53%
 	return reverse(x)
 }
