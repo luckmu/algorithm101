@@ -1,5 +1,9 @@
 package sort
 
+func Quicksort(nums []int) {
+	quicksort(nums)
+}
+
 func quicksort(nums []int) {
 	// quicksorti(nums, 0, len(nums)-1)
 	quicksortii(nums, 0, len(nums)-1)
@@ -9,21 +13,22 @@ func quicksorti(nums []int, l, r int) {
 	if l >= r {
 		return
 	}
-	i, j := l, r
-	pivot := nums[i]
-	for i < j {
-		for i < j && nums[j] >= pivot {
-			j--
+	head, tail, key := l, r, nums[l]
+	for head < tail {
+		for head < tail && nums[tail] >= key {
+			// >=
+			tail--
 		}
-		nums[i] = nums[j]
-		for i < j && nums[i] <= pivot {
-			i++
+		nums[head] = nums[tail]
+		for head < tail && nums[head] <= key {
+			// <=
+			head++
 		}
-		nums[j] = nums[i]
+		nums[tail] = nums[head]
 	}
-	nums[i] = pivot
-	quicksorti(nums, l, i-1)
-	quicksorti(nums, i+1, r)
+	nums[head] = key
+	quicksorti(nums, l, head-1)
+	quicksorti(nums, head+1, r)
 }
 
 // quicksortii method2

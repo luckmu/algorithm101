@@ -3,6 +3,9 @@ package dpointer
 // runtime 53.89%, memory 84.9%
 func minWindow(s string, t string) string {
 	ret, origlen := "", 0
+	// why origlen is length of t or s ?
+	// s is easy to understand but t ?
+	// 
 	if len(s) > len(t) {
 		origlen = len(s)
 	} else {

@@ -1,16 +1,16 @@
 package interview
 
 // certainly time limit exceeded
-func canJumpdfs(i int, nums []int) bool {
-	if i+nums[i] >= len(nums)-1 {
-		return true
-	}
-	var can bool
-	for offset := 0; offset < nums[i]; offset++ {
-		can = can || canJumpdfs(i+offset, nums)
-	}
-	return can
-}
+// func canJumpdfs(i int, nums []int) bool {
+// 	if i+nums[i] >= len(nums)-1 {
+// 		return true
+// 	}
+// 	var can bool
+// 	for offset := 0; offset < nums[i]; offset++ {
+// 		can = can || canJumpdfs(i+offset, nums)
+// 	}
+// 	return can
+// }
 
 // time 81.20%; mem 93.59%
 func canJump(nums []int) bool {

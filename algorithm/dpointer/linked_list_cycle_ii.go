@@ -3,25 +3,19 @@ package dpointer
 // 142
 // runtime 94.63%; memory 79.44%
 func detectCycle(head *ListNode) *ListNode {
-	if head == nil || head.Next == nil {
-		return nil
-	}
-
-	var slow, fast *ListNode = head.Next, head.Next.Next
-	for fast != nil && fast.Next != nil {
-		if slow == fast {
-			// circle
-			// 1,2,3,4
-			fast = head
-			for slow != fast {
-				slow = slow.Next
-				fast = fast.Next
-			}
-			return fast
+	p1, p2 := head, head
+	for {
+		if p2 == nil || p2.Next == nil {
+			return nil
 		}
-		slow = slow.Next
-		fast = fast.Next.Next
+		p1, p2 = p1.Next, p2.Next
+		if p1 == p2 {
+			break
+		}
 	}
-
-	return nil
+	p2 = head
+	for p1 != p2 {
+		p1, p2 = p1.Next, p2.Next
+	}
+	return p1
 }

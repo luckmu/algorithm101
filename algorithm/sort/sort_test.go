@@ -3,7 +3,8 @@ package sort
 import "testing"
 
 func TestSort(t *testing.T) {
-	// quicksort: [0 1 1 1 2 2 4 23 5123]
+	
+	// // quicksort: [0 1 1 1 2 2 4 23 5123]
 	// quicknums := []int{1, 4, 2, 1, 5123, 23, 1, 2, 0}
 	// quicksort(quicknums)
 	// t.Log(quicknums)
