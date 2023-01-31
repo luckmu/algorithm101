@@ -1,5 +1,9 @@
 # algorithm101
 
+*Prerequisite*:
+
+- *同 1 题目的不同解法放在不同目录下（如有 bfs 和 dfs, 这道题同时位于 bfs 和 dfs 目录下）*
+
 |nos|name|topic|state|desc|
 |:-:|:-:|:-:|:-:|:-|
 |122|two sum|dpointer|ac|-|
